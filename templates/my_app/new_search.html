@@ -3,73 +3,32 @@
 {% block content %}
     <h2 style="text-align: center">{{ search|title }}</h2>
     <div class="row">
+    {% for post in final_results.values %}
 
-        <di class="col s4">
-    <div class="card">
-        <div class="card-image">
-            <a href="#!"><img src="https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt=""></a>
-        </div>
-        <div class="card-content">
-            <p>Test</p>
-        </div>
-        <div class="card-action">
-            <div class="card-action">
-                <a href="#!">View listing: price </a>
+            <div class="col m3">
+                <div class="card">
+                    <div class="card-image">
+                        <a href="{{post.url }}"><img src="{{ post.images.1}}" alt=""></a>
+{#                        <div class="carousel carousel-slider">#}
+{#                            {% for img in post.images %}#}
+{#                                <a class="carousel-item" href="#!"><img src="{{ img }}"></a>#}
+{#                        {% endfor %}#}
+{#                        </div>#}
+                    </div>
+                    <div class="card-content">
+                        <p>{{ post.title }}</p>
+                    </div>
+                    <div class="card-action">
+                        <div class="card-action">
+                        <a href="{{  post.url }}">View listing: price {{ post.price }} </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    </di>
-
-    <di class="col s4">
-    <div class="card">
-        <div class="card-image">
-            <a href="#!"><img src="https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt=""></a>
-        </div>
-        <div class="card-content">
-            <p>Test</p>
-        </div>
-        <div class="card-action">
-            <div class="card-action">
-                <a href="#!">View listing: price </a>
-            </div>
-        </div>
-    </div>
-    </di>
-
-    <di class="col s4">
-    <div class="card">
-        <div class="card-image">
-            <a href="#!"><img src="https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt=""></a>
-        </div>
-        <div class="card-content">
-            <p>Test</p>
-        </div>
-        <div class="card-action">
-            <div class="card-action">
-                <a href="#!">View listing: price </a>
-            </div>
-        </div>
-    </div>
-    </di>
-
-    <div class="col s4">
-    <div class="card">
-        <div class="card-image">
-            <a href="#!"><img src="https://images.unsplash.com/photo-1494548162494-384bba4ab999?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt=""></a>
-        </div>
-        <div class="card-content">
-            <p>Test</p>
-        </div>
-        <div class="card-action">
-            <div class="card-action">
-                <a href="#!">View listing: price </a>
-            </div>
-        </div>
-    </div>
-    </div>
 
 
 
+    {% endfor %}
     </div>
 
 {% endblock content %}

@@ -56,10 +56,18 @@
         {% csrf_token %}
         <!--<input type="text" name="search" placeholder="search">--->
 
-        <div class="input-field col">
-          <i class="material-icons prefix">search</i>
-          <input id="icon_prefix" type="text" class="validate" name="search">
-          <label for="icon_prefix"></label>
+        <div class="input-field col ">
+{#          <i class="material-icons prefix">search</i>#}
+{#          <input id="icon_prefix" type="text" class="validate" name="search">#}
+{#          <label for="icon_prefix"></label>#}
+{#            <input id="search s4" type="search" required >#}
+{#            <label class="label-icon" for="search"><i class="material-icons">search</i></label>#}
+{#            <i class="material-icons">close</i>#}
+            <div class="input-field">
+                <i class="material-icons prefix">search</i>
+                <input id="icon_prefix" type="search" class="validate" name="search">
+                <label for="icon_search">Enter your Text Here</label>
+            </div>
         </div>
 
         <button class="btn waves-effect waves-light" type="submit" name="action">Search
@@ -75,6 +83,7 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"/>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 </body>
 </html>
